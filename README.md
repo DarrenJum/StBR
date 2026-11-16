@@ -4,13 +4,15 @@
 [![Python 3.9+](https://img.shields.io/badge/Python-3.8.5-blue.svg)](https://www.python.org/)
 [![PyTorch 2.x](https://img.shields.io/badge/PyTorch-2.1+-ee4c2c.svg)](https://pytorch.org/)
 
-Official PyTorch implementation of the NeurIPS 2026 paper: **[Variational Consequence-Driven Offline Reinforcement Learning](https://arxiv.org/abs/2610.38238)**  
+Official PyTorch implementation of the NeurIPS 2026 paper:  
+**[Variational Consequence-Driven Offline Reinforcement Learning](https://arxiv.org/abs/2610.38238)**  
+*Wen Jiang, Ke Jiang, Jin Wang, Xiaoyang Tan*
 
-## 💡 Overview & Key Innovations
+## Overview
 
-Conventional offline reinforcement learning (RL) methods mitigate distribution shift by imposing divergence constraints on **policy induced state-consequence distributions**.
+StBR mitigate distribution shift by imposing divergence constraints on **policy induced state-consequence distributions**.
 
-* **State Belief Gaussian Fitting (`vib.py`)**: Regularizing state-consequence distributions within a Gaussian latent space.
+* **State Belief Gaussian Fitting (`vib.py`)**: Matching state-consequence distributions within a Gaussian latent space.
 * **Offline RL training (`StBR.py`)**: Supporting both deterministic policies and generative stochastic policies (`--flow_policy`), as well as seamless offline-to-online fine-tuning(`main_finetune.py`).
 
 
