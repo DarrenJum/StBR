@@ -1,0 +1,10 @@
+env: door-human-v1
+reward_standardize: true
+actor_hidden_dim: 512
+critic_hidden_dim: 512
+actor_lr: 0.000003
+discount: 0.95
+work_dir: train_offline
+beta: 0.01
+beta2: 0.01
+lambd: 0.03

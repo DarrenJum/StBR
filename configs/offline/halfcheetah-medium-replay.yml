@@ -1,0 +1,4 @@
+env: halfcheetah-medium-replay-v2
+work_dir: train_offline
+lambd: 0.01
+beta: 0.01

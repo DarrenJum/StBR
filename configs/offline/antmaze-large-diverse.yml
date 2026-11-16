@@ -1,0 +1,12 @@
+env: antmaze-large-diverse-v2
+actor_lr: 0.0001
+discount: 0.995
+actor_init_w: 0.001
+critic_init_w: 0.003
+antmaze_no_normalize: true
+eval_episodes: 100
+eval_freq: 100000
+work_dir: train_offline
+vib_timesteps: 800000
+beta: 0.01
+lambd: 0.06

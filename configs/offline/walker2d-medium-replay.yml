@@ -1,0 +1,6 @@
+env: walker2d-medium-replay-v2
+work_dir: train_offline
+latent_dim: 12
+beta: 0.01
+lambd: 0.1
+

@@ -1,0 +1,4 @@
+env: hopper-medium-v2
+work_dir: train_offline
+lambd: 0.03
+

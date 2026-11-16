@@ -1,0 +1,6 @@
+env: halfcheetah-medium-expert-v2
+work_dir: train_offline
+latent_dim: 12
+beta: 0.01
+beta2: 0.3
+lambd: 0.1
