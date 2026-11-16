@@ -61,8 +61,8 @@ if __name__ == "__main__":
     parser.add_argument('--pretrain_step', default=1e6, type=int)
     parser.add_argument('--buffer_size', default=2e6, type=int)
     parser.add_argument('--start_times', default=0, type=int)
-    parser.add_argument('--lambd_cool', default=True, action='store_true')
-    parser.add_argument('--lambd_end', default=0.3, type=float)
+    parser.add_argument('--lambd_cool', default=False, action='store_true')
+    parser.add_argument('--lambd_end', default=0.2, type=float)
     # Config
     parser.add_argument('--work_dir', type=str)
     parser.add_argument('--config', default='configs/online_finetune/antmaze-large-diverse.yml', type=str)

@@ -332,7 +332,7 @@ class StBR(object):
             neg_kl_p = self.vib.kl_loss(state, pi)
 
             if self.lambd_cool:
-                lambd = self.lambd * max(self.lambd_end, (1 - self.total_it / (self.lambd_end * 1e6)))
+                lambd = self.lambd * max(self.lambd_end, (1 - self.total_it / 1e6))
                 logger.log('train/lambd', lambd, self.total_it)
             else:
                 lambd = self.lambd
