@@ -4,9 +4,7 @@
 [![Python 3.9+](https://img.shields.io/badge/Python-3.8.5-blue.svg)](https://www.python.org/)
 [![PyTorch 2.x](https://img.shields.io/badge/PyTorch-2.1+-ee4c2c.svg)](https://pytorch.org/)
 
-Official PyTorch implementation of the NeurIPS 2026 paper:  
-**[Variational Consequence-Driven Offline Reinforcement Learning](https://arxiv.org/abs/2610.38238)**  
-*Wen Jiang, Ke Jiang, Jin Wang, Xiaoyang Tan*
+Official implementation of the NeurIPS 2026 paper: **[Variational Consequence-Driven Offline Reinforcement Learning](https://arxiv.org/abs/2610.38238)**
 
 ## Overview
 
