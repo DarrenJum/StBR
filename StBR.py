@@ -275,7 +275,6 @@ class StBR(object):
                 for param, target_param in zip(self.actor.parameters(), self.actor_target.parameters()):
                     target_param.data.copy_(self.tau * param.data + (1 - self.tau) * target_param.data)
 
-
     def train_online(self, replay_buffer: ReplayBuffer, vib_optimizer, batch_size=256, logger=None):
         self.total_it += 1
 
@@ -381,6 +380,7 @@ class StBR(object):
         torch.save(self.actor_target.state_dict(), os.path.join(model_dir, f"actor_target_s{str(type)}.pth"))
         torch.save(self.actor_optimizer.state_dict(), os.path.join(model_dir, f"actor_optimizer_s{str(type)}.pth"))
         torch.save(self.vib.state_dict(), os.path.join(model_dir, f"vib_s{str(type)}.pth"))
+        torch.save(self.vib_optimizer.state_dict(), os.path.join(model_dir, f"vib_optimizer_s{str(type)}.pth"))
 
     def load(self, model_dir, step=1000000):
         self.critic.load_state_dict(
@@ -398,3 +398,5 @@ class StBR(object):
             torch.load(os.path.join(model_dir, f"actor_optimizer_s{str(step)}.pth"), map_location=self.device))
         self.vib.load_state_dict(
             torch.load(os.path.join(model_dir, f"vib_s{str(step)}.pth"), map_location=self.device))
+        self.vib.load_state_dict(
+            torch.load(os.path.join(model_dir, f"vib_optimizer_s{str(step)}.pth"), map_location=self.device))

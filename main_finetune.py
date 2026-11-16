@@ -51,7 +51,7 @@ if __name__ == "__main__":
     parser.add_argument("--scheduler", default=False, action='store_true')
     parser.add_argument("--beta", default=0.001, type=float)
     parser.add_argument("--beta2", default=0.1, type=float)
-    parser.add_argument("--neg_sample", default=1e-10, type=float)
+    parser.add_argument("--neg_sample", default=0.0, type=float)
     # Antmaze and Adroit
     parser.add_argument('--antmaze_center_reward', default=0.0, type=float)
     parser.add_argument('--antmaze_no_normalize', default=False, action='store_true')
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     # State Belief Gaussian Fitting (SBGF)
     latent_dim = int(state_dim * 1.2) if args.latent_dim is None else int(args.latent_dim)
     vib = VIB(state_dim, action_dim, max_action, latent_dim, args.beta, args.beta2, args.neg_sample, device).to(device)
-    vib_optimizer = torch.optim.Adam(vib.parameters(), lr=1e-3, weight_decay=0)
+    vib_optimizer = torch.optim.Adam(vib.parameters(), lr=3e-4, weight_decay=0)
     # scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer=vib_optimizer, gamma=0.95)
 
     kwargs = {
