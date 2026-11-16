@@ -89,8 +89,8 @@ def set_seed_everywhere(env, args):
         torch.cuda.manual_seed(args.seed)
         torch.cuda.manual_seed_all(args.seed)
         # Align performance with old cuda devices (e.g. 2080ti)
-        # torch.backends.cuda.matmul.allow_tf32 = False
-        # torch.backends.cudnn.allow_tf32 = False
+        torch.backends.cuda.matmul.allow_tf32 = False
+        torch.backends.cudnn.allow_tf32 = False
 
 
 def get_lr(optimizer):
