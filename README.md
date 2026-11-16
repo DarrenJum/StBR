@@ -1,6 +1,20 @@
-# Structural Behavior Regularization
+# StBR: Structural Behavior Regularization
 
-Official implementation for NeurIPS 2026 paper [Variational Consequence-Driven Offline Reinforcement Learning](https://arxiv.org/abs/2610.38238).
+[![Paper](https://img.shields.io/badge/NeurIPS_2026-arXiv:2610.38238-b31b1b.svg)](https://arxiv.org/abs/2610.38238)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.8.5-blue.svg)](https://www.python.org/)
+[![PyTorch 2.x](https://img.shields.io/badge/PyTorch-2.1+-ee4c2c.svg)](https://pytorch.org/)
+
+Official PyTorch implementation of the NeurIPS 2026 paper:  
+**[Variational Consequence-Driven Offline Reinforcement Learning](https://arxiv.org/abs/2610.38238)**  
+*Wen Jiang, Ke Jiang, Jin Wang, Xiaoyang Tan*
+
+## 💡 Overview & Key Innovations
+
+Conventional offline reinforcement learning (RL) methods mitigate distribution shift by imposing divergence constraints on **policy induced state-consequence distributions**.
+
+* **State Belief Gaussian Fitting (`vib.py`)**: Regularizing state-consequence distributions within a Gaussian latent space.
+* **Offline RL training (`StBR.py`)**: Supporting both deterministic policies and generative stochastic policies (`--flow_policy`), as well as seamless offline-to-online fine-tuning(`main_finetune.py`).
+
 
 ## Environment
 
@@ -58,8 +72,8 @@ If you find this code useful for your research, please cite our paper as:
 ```
 @inproceedings{jiang2026variational,
   title={Variational Consequence-Driven Offline Reinforcement Learning},
-  author={Jiang, Wen and Jiang, Ke and Tan, Xiaoyang},
-  journal={Advances in Neural Information Processing Systems},
+  author={Jiang, Wen and Jiang, Ke and Wang, Jin and Tan, Xiaoyang},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2026}
 }
 ```

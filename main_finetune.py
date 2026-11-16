@@ -17,7 +17,6 @@ import d4rl
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     # Experiment
@@ -192,7 +191,7 @@ if __name__ == "__main__":
         print("No pretrained model")
         exit(0)
     else:
-        # policy.load(args.pretrain_model, int(args.pretrain_step))
+        policy.load(args.pretrain_model, int(args.pretrain_step))
         if args.lambd_cool:
             vib.eval()
 
