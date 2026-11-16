@@ -8,7 +8,7 @@ Official implementation of the NeurIPS 2026 paper: **[Variational Consequence-Dr
 
 ## Overview
 
-StBR mitigate distribution shift by imposing divergence constraints on **policy induced state-consequence distributions**.
+StBR mitigate distribution shift by imposing constraints on **policy induced state-consequence distributions**.
 
 * **State Belief Gaussian Fitting (`vib.py`)**: Matching state-consequence distributions within a Gaussian latent space.
 * **Offline RL training (`StBR.py`)**: Supporting both deterministic policies and generative stochastic policies (`--flow_policy`), as well as seamless offline-to-online fine-tuning(`main_finetune.py`).
