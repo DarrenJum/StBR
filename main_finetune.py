@@ -13,8 +13,6 @@ from log import Logger
 from vib import VIB
 from eval import eval_policy
 import os
-os.add_dll_directory("C://Users//darre//.mujoco//mjpro150//bin")
-os.add_dll_directory("C://Users//darre//.mujoco//mujoco-py-1.50.1.0//mujoco_py")
 import d4rl
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
