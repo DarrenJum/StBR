@@ -167,7 +167,6 @@ class StBR(object):
         self._Vmin = Vmin
 
         # VIB
-        self.s_std = None
         self.flow_policy = flow_policy
         self.vib_timesteps = vib_timesteps
         self.vib = vib
