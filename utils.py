@@ -59,10 +59,10 @@ class ReplayBuffer(object):
         self.next_state[:self.ptr] = dataset['next_observations']
         rewards = dataset['rewards']
         if standardize:
-            self.reward = ((dataset['rewards'] - dataset['rewards'].min()) / (
+            self.reward[:self.ptr] = ((dataset['rewards'] - dataset['rewards'].min()) / (
                         dataset['rewards'].max() - dataset['rewards'].min())).reshape(-1, 1)
         else:
-            self.reward = rewards.reshape(-1, 1)
+            self.reward[:self.ptr] = rewards.reshape(-1, 1)
         self.not_done[:self.ptr] = 1. - dataset['terminals'].reshape(-1, 1)
 
     def normalize_states(self, eps=1e-3):
