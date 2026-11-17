@@ -9,4 +9,4 @@ eval_freq: 100000
 work_dir: train_offline
 vib_timesteps: 800000
 beta: 0.01
-lambd: 0.06
+lambd: 0.1
