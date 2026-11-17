@@ -20,7 +20,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     # Experiment
-    parser.add_argument("--policy", default="StBR")                 # Policy name
+    parser.add_argument("--policy", default="StBR", type=str)       # Policy name
     parser.add_argument("--env", type=str)                          # OpenAI gym environment name
     parser.add_argument("--seed", default=1, type=int)              # Sets Gym, PyTorch and Numpy seeds
     parser.add_argument("--eval_freq", default=1e4, type=int)       # How often (time steps) we evaluate
