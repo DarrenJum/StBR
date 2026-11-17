@@ -2,7 +2,7 @@ env: pen-human-v1
 reward_standardize: true
 actor_hidden_dim: 512
 critic_hidden_dim: 512
-actor_lr: 0.000003
+actor_lr: 0.00001
 discount: 0.95
 work_dir: train_offline
 beta: 0.01
