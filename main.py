@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     # Experiment
     parser.add_argument("--env", type=str)
-    parser.add_argument("--policy", default="StBR", type=str)    # Policy name
+    parser.add_argument("--policy", default="StBR", type=str)       # Policy name
     parser.add_argument("--seed", default=0, type=int)              # Sets Gym, PyTorch and Numpy seeds
     parser.add_argument("--eval_freq", default=1e4, type=int)       # How often (time steps) we evaluate 5e3 3e6
     parser.add_argument("--max_timesteps", default=1e6, type=int)   # Max time steps to run environment
