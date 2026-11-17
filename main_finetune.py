@@ -177,7 +177,7 @@ if __name__ == "__main__":
         policy._Vmax = max(0.0, replay_buffer.reward[:replay_buffer.size].max() / (1 - args.discount))
         policy._Vmin = min(0.0, replay_buffer.reward[:replay_buffer.size].min() / (1 - args.discount), policy._Vmax - 1.0 / (1 - args.discount))
 
-    logger = Logger(args.work_dir, use_tb=True, train_log_interval=500)
+    logger = Logger(args.work_dir, use_tb=True, train_log_interval=2000)
     video = VideoRecorder(dir_name=args.video_dir)
 
     state, done = env.reset(), False
