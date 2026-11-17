@@ -160,7 +160,7 @@ if __name__ == "__main__":
         raise NotImplementedError
 
     replay_buffer = utils.ReplayBuffer(state_dim, action_dim, device, max_size=int(args.buffer_size))
-    replay_buffer.convert_D4RL_finetune(d4rl.qlearning_dataset(env))
+    replay_buffer.convert_D4RL_finetune(d4rl.qlearning_dataset(env), args.reward_standardize)
 
     if 'antmaze' in args.env and args.antmaze_center_reward is not None:
         # Center reward for Ant-Maze
