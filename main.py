@@ -169,11 +169,9 @@ if __name__ == "__main__":
     # Normalize
     if args.normalize and not ('antmaze' in args.env and args.antmaze_no_normalize):
         mean, std = replay_buffer.normalize_states()
-        policy.s_std = torch.tensor(1).to(device)
     else:
         print("No normalize")
         mean, std = 0, 1
-        policy.s_std = torch.from_numpy(replay_buffer.state[:replay_buffer.size].std(0, keepdims=True)).to(device)
 
     if args.clip_v:
         policy._Vmax = max(0.0, replay_buffer.reward.max() / (1 - args.discount))
