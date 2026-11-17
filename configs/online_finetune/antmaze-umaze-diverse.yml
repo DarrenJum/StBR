@@ -8,4 +8,4 @@ eval_episodes: 100
 eval_freq: 100000
 work_dir: train_finetune
 beta: 0.01
-lambd: 0.06
+lambd: 0.1
