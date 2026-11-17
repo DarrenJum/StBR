@@ -398,5 +398,5 @@ class StBR(object):
             torch.load(os.path.join(model_dir, f"actor_optimizer_s{str(step)}.pth"), map_location=self.device))
         self.vib.load_state_dict(
             torch.load(os.path.join(model_dir, f"vib_s{str(step)}.pth"), map_location=self.device))
-        self.vib.load_state_dict(
+        self.vib_optimizer.load_state_dict(
             torch.load(os.path.join(model_dir, f"vib_optimizer_s{str(step)}.pth"), map_location=self.device))
